@@ -95,13 +95,13 @@ namespace LinqExercise
 
 
             //TODO: Print the Sum of the employees' YearsOfExperience if their YOE is less than or equal to 10 AND Age is greater than 35.
-            var tenuredEmployees = employees.Where(person => person.YearsOfExperience <= 10 && person.Age > 35).ToList();
+            var tenuredEmployees = employees.Where(person => person.YearsOfExperience <= 10 && person.Age  > 35).ToList();
 
             Console.WriteLine($"Sum of tenured employees years of experience:{tenuredEmployees.Sum(person => person.YearsOfExperience)}");
 
 
             //TODO: Now print the Average of the employees' YearsOfExperience if their YOE is less than or equal to 10 AND Age is greater than 35.
-            var juniorEmployees = employees.Where(person => person.YearsOfExperience >= 10 && person.Age < 35).ToList();
+            var juniorEmployees = employees.Where(person => person.YearsOfExperience <= 10 && person.Age > 35).ToList();
 
             Console.WriteLine($"Average YOE: {juniorEmployees.Average(person => person.YearsOfExperience)}");
 
